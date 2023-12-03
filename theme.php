@@ -177,8 +177,9 @@ class theme implements e_theme_render
 						";
     e107::js("footer-inline", $code1);
 
-
-    $code2 = "$('a[href=#top]').click(function(){
+ 
+// $code2 = "$('a[href=#top]').click(function(){
+    $code2 = "$('a#totop').click(function(){
              jQuery('html, body').animate({scrollTop:0}, 'slow');
              return false;
             }); 
