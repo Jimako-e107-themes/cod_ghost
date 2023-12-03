@@ -19,5 +19,5 @@ define("LAN_THEME_5", " - ");
 define("LAN_THEME_6", "Theme by: <a href='http://csaszy.hu'><b>CsaSzy Themes</b></a>");
 define("LAN_THEME_7", "Trackback: ");
 define("LAN_THEME_8", "Search for...");
-
-?>
+ 
+ 

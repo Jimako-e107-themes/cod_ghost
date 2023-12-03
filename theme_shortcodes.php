@@ -21,6 +21,10 @@ class theme_shortcodes extends e_shortcode
  
   /* {CAROUSEL} */
   function sc_carousel() {
+
+		$images_number = e107::pref('theme', 'carousel_images');
+
+		$images_number = varset($images_number, 8);
 	
 		$ret = "";
 		
@@ -28,8 +32,13 @@ class theme_shortcodes extends e_shortcode
 		    <div id='carousel'>
 		      <a class='buttons prev' href='#'>&nbsp;</a>
 		        <div class='viewport'>
-		          <ul class='overview'>
-		            <li><img src='".THEME_ABS."images/carousel/img1.jpg' alt='' /></li>
+		          <ul class='overview'>";
+					for ($x = 1; $x <= $images_number; $x++)
+					{
+						$ret .= "<li><img src='" . THEME_ABS . "images/carousel/img{$x}.jpg' alt='' /></li>";
+					}	
+					/*
+		            
 		            <li><img src='".THEME_ABS."images/carousel/img2.jpg' alt='' /></li>
 		            <li><img src='".THEME_ABS."images/carousel/img3.jpg' alt='' /></li>
 		            <li><img src='".THEME_ABS."images/carousel/img4.jpg' alt='' /></li>
@@ -37,6 +46,8 @@ class theme_shortcodes extends e_shortcode
 		            <li><img src='".THEME_ABS."images/carousel/img6.jpg' alt='' /></li>
 		            <li><img src='".THEME_ABS."images/carousel/img7.jpg' alt='' /></li>
 		            <li><img src='".THEME_ABS."images/carousel/img8.jpg' alt='' /></li>
+					*/
+					$ret .= "		
 		          </ul>
 		        </div>
 		      <a class='buttons next' href='#'>&nbsp;</a>
